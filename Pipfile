@@ -5,12 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 pytest = "*"
-p4p = "*"
 
 [packages]
 graphql-core = "==3.0.0a2"
 aiohttp = "*"
-numpy = "*"
+annotypes = "*"
+p4p = "*"
+aiohttp-cors = "*"
 
 [requires]
 python_version = "3.7"
