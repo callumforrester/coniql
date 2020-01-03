@@ -49,3 +49,101 @@ record (waveform, "TMC43-TS-IOC-01:UINT8ARR") {
     field(NELM, "20")
     field(PINI, "YES")
 }
+
+record (stringin, "TMC43-TS-MSTAT-01:TIME") {
+    field(DESC, "Current Time in Diamond")
+    field(INP, "CS-CS-MSTAT-01:TIME CP")
+}
+
+record (ai, "TMC43-TS-MSTAT-01:LIFETIME") {
+    field(DESC, "Storage ring lifetime")
+    field(INP, "SR-DI-DCCT-01:LIFETIME CP")
+    field(PREC, "2")
+    field(EGU, "h")
+}
+
+record (ai, "TMC06I-MO-SERVC-01:CURRGAPD") {
+    field(DESC, "I06 Gap")
+    field(INP, "SR06I-MO-SERVC-01:CURRGAPD CP")
+    field(EGU, "mm")
+}
+
+record (ai, "TMC06I-MO-SERVC-21:CURRGAPD") {
+    field(DESC, "Storage ring lifetime")
+    field(INP, "SR06I-MO-SERVC-21:CURRGAPD CP")
+    field(EGU, "mm")
+}
+
+record (ai, "TMC06I-MO-SERVC-01:FIELD") {
+    field(DESC, "Storage ring lifetime")
+    field(INP, "SR06I-MO-SERVC-01:FIELD CP")
+}
+
+record (ai, "TMC06I-MO-SERVC-21:FIELD") {
+    field(DESC, "Storage ring lifetime")
+    field(INP, "SR06I-MO-SERVC-21:FIELD CP")
+}
+
+record(mbbi, "TMC06I-PS-SHTR-01:STA") {
+  field(DESC, "Status")
+  field(DTYP, "Soft Channel")
+  field(ZRST, "Fault")
+  field(ONST, "Open")
+  field(TWST, "Opening")
+  field(THST, "Closed")
+  field(FRST, "Closing")
+  field(ZRSV, "MAJOR")
+  field(ONSV, "NO_ALARM")
+  field(TWSV, "NO_ALARM")
+  field(THSV, "NO_ALARM")
+  field(FRSV, "NO_ALARM")
+  field(INP, "FE06I-PS-SHTR-01:GETSTA CP")
+}
+
+record(mbbi, "TMC06I-OP-SHTR-02:STA") {
+  field(DESC, "Status")
+  field(DTYP, "Soft Channel")
+  field(ZRST, "Fault")
+  field(ONST, "Open")
+  field(TWST, "Opening")
+  field(THST, "Closed")
+  field(FRST, "Closing")
+  field(ZRSV, "MAJOR")
+  field(ONSV, "NO_ALARM")
+  field(TWSV, "NO_ALARM")
+  field(THSV, "NO_ALARM")
+  field(FRSV, "NO_ALARM")
+  field(INP, "FE06I-PS-SHTR-02:STA CP")
+}
+
+record(mbbi, "TMC06I-BL-SHTR-01:STA") {
+  field(DESC, "Status")
+  field(DTYP, "Soft Channel")
+  field(ZRST, "Fault")
+  field(ONST, "Open")
+  field(TWST, "Opening")
+  field(THST, "Closed")
+  field(FRST, "Closing")
+  field(ZRSV, "MAJOR")
+  field(ONSV, "NO_ALARM")
+  field(TWSV, "NO_ALARM")
+  field(THSV, "NO_ALARM")
+  field(FRSV, "NO_ALARM")
+  field(INP, "BL06I-PS-SHTR-01:STA CP")
+}
+
+record(mbbi, "TMC06J-BL-SHTR-01:STA") {
+  field(DESC, "Status")
+  field(DTYP, "Soft Channel")
+  field(ZRST, "Fault")
+  field(ONST, "Open")
+  field(TWST, "Opening")
+  field(THST, "Closed")
+  field(FRST, "Closing")
+  field(ZRSV, "MAJOR")
+  field(ONSV, "NO_ALARM")
+  field(TWSV, "NO_ALARM")
+  field(THSV, "NO_ALARM")
+  field(FRSV, "NO_ALARM")
+  field(INP, "BL06J-PS-SHTR-01:STA CP")
+}
